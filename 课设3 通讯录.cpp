@@ -5,7 +5,6 @@
 #include <conio.h>
 
 using namespace std;
-bool debug = false;
 struct contacts
 {
 	string Name;
@@ -82,46 +81,46 @@ void HashListCreate()
 
 char Menu()
 {
-	system("title = Í¨Ñ¶Â¼Ö÷²Ëµ¥");
+	system("title = é€šè®¯å½•ä¸»èœå•");
 	
-	cout << "ÊäÈë¶ÔÓ¦Êı×ÖÑ¡Ôñ¹¦ÄÜ£º" << endl;
+	cout << "è¾“å…¥å¯¹åº”æ•°å­—é€‰æ‹©åŠŸèƒ½ï¼š" << endl;
 	cout << "|--------------------|--------------------|" << endl;
-	cout << "|1.ĞÂ½¨Ò»¸öÁªÏµÈË    |    2.É¾³ıÖ¸¶¨ÁªÏµÈË|" << endl;
+	cout << "|1.æ–°å»ºä¸€ä¸ªè”ç³»äºº    |    2.åˆ é™¤æŒ‡å®šè”ç³»äºº|" << endl;
 	cout << "|--------------------|--------------------|" << endl;
-	cout << "|3.²éÑ¯Ö¸¶¨ÁªÏµÈË    |    4.²é¿´È«²¿ÁªÏµÈË|" << endl;
+	cout << "|3.æŸ¥è¯¢æŒ‡å®šè”ç³»äºº    |    4.æŸ¥çœ‹å…¨éƒ¨è”ç³»äºº|" << endl;
 	cout << "|--------------------|--------------------|" << endl;
-	cout << "|5.¸ü¸ÄÖ÷ÌâºÍÅäÉ«    |    6.ÍË³öÍ¨Ñ¶Â¼³ÌĞò|" << endl;
+	cout << "|5.æ›´æ”¹ä¸»é¢˜å’Œé…è‰²    |    6.é€€å‡ºé€šè®¯å½•ç¨‹åº|" << endl;
 	cout << "|--------------------|--------------------|" << endl;
 	return _getch();
 }
 
 void Menu1()
 {
-	system("title = ĞÂ½¨Ò»¸öÁªÏµÈË");
+	system("title = æ–°å»ºä¸€ä¸ªè”ç³»äºº");
 	string name, Telnum, address;
 	system("cls");
 	counter++;
 
-	cout << "ÇëÊäÈëĞÕÃûµÄººÓïÆ´ÒôÈ«Æ´" << endl;
+	cout << "è¯·è¾“å…¥å§“åçš„æ±‰è¯­æ‹¼éŸ³å…¨æ‹¼" << endl;
 	cin >> name;
 	NameList.push_back(name);
 	Temp.Name = name;
 	system("cls");
 
-	cout << "ÇëÊäÈë" << name << "µÄµç»°ºÅÂë" << endl;
+	cout << "è¯·è¾“å…¥" << name << "çš„ç”µè¯å·ç " << endl;
 	cin >> Telnum;
 	NumList.push_back(Telnum);
 	Temp.TelNum = Telnum;
 	system("cls");
 
-	cout << "ÇëÊäÈë" << name << "µÄÁªÏµµØÖ·" << endl;
+	cout << "è¯·è¾“å…¥" << name << "çš„è”ç³»åœ°å€" << endl;
 	cin >> address;
 	AddList.push_back(address);
 	Temp.Address = address;
 	system("cls");
 
 	HashListCreate();
-	cout << "³É¹¦ĞÂ½¨ÁªÏµÈË£º" << name << endl;
+	cout << "æˆåŠŸæ–°å»ºè”ç³»äººï¼š" << name << endl;
 	system("pause");
 	system("cls");
 
@@ -129,13 +128,13 @@ void Menu1()
 
 void Menu2()
 {
-	system("title = É¾³ıÖ¸¶¨ÁªÏµÈË");
+	system("title = åˆ é™¤æŒ‡å®šè”ç³»äºº");
 	string name;
 	int i;
 	system("cls");
 	if (counter == 0)
 	{
-		cout << "µ±Ç°Í¨Ñ¶Â¼ÄÚÃ»ÓĞÁªÏµÈË£¬ÎŞ·¨Ö´ĞĞÉ¾³ı²Ù×÷" << endl;
+		cout << "å½“å‰é€šè®¯å½•å†…æ²¡æœ‰è”ç³»äººï¼Œæ— æ³•æ‰§è¡Œåˆ é™¤æ“ä½œ" << endl;
 
 	}
 	else if (counter == 1)
@@ -146,12 +145,12 @@ void Menu2()
 		NameList.clear();
 		NumList.clear();
 		AddList.clear();
-		cout << "µ±Ç°Í¨Ñ¶Â¼½öÓĞÒ»ÈË£¬³É¹¦É¾³ıÁªÏµÈË" << name << endl;
+		cout << "å½“å‰é€šè®¯å½•ä»…æœ‰ä¸€äººï¼ŒæˆåŠŸåˆ é™¤è”ç³»äºº" << name << endl;
 	}
 	else
 	{
 		counter--;
-		cout << "ÇëÊäÈë´ıÉ¾³ıÁªÏµÈËĞÕÃû£º" << endl;
+		cout << "è¯·è¾“å…¥å¾…åˆ é™¤è”ç³»äººå§“åï¼š" << endl;
 		cin >> name;
 
 		for (i = 0; i <= counter; i++)
@@ -168,13 +167,13 @@ void Menu2()
 		{
 			system("cls");
 			HashListCreate();
-			cout << "³É¹¦É¾³ıÁªÏµÈË" << name << endl << endl;
+			cout << "æˆåŠŸåˆ é™¤è”ç³»äºº" << name << endl << endl;
 		}
 
 		else
 		{
 			system("cls");
-			cout << "Î´ÕÒµ½ÁªÏµÈË" << name << endl << endl;
+			cout << "æœªæ‰¾åˆ°è”ç³»äºº" << name << endl << endl;
 		}
 	}
 	system("pause");
@@ -183,25 +182,25 @@ void Menu2()
 
 void Menu3()
 {
-	system("title = ²éÑ¯Ö¸¶¨ÁªÏµÈË");
+	system("title = æŸ¥è¯¢æŒ‡å®šè”ç³»äºº");
 	string name;
 	int Hash;
 	system("cls");
-	if(counter==0)cout<<"ÎŞÁªÏµÈË¿É¹©²éÕÒ";
+	if(counter==0)cout<<"æ— è”ç³»äººå¯ä¾›æŸ¥æ‰¾";
 	else 
 	{
-	cout << "ÇëÊäÈë´ı²éÕÒÁªÏµÈËĞÕÃûÆ´ÒôÈ«Æ´£º" << endl;
+	cout << "è¯·è¾“å…¥å¾…æŸ¥æ‰¾è”ç³»äººå§“åæ‹¼éŸ³å…¨æ‹¼ï¼š" << endl;
 	cin >> name;
 	Hash = HashFunc(name);
 
 	if (Recordlist[Hash] == true)
 	{
 		cout << "---------------------------------------------" << endl;
-		cout << "|    ĞÕÃû£º|" << name << endl;
+		cout << "|    å§“åï¼š|" << name << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|  µç»°ºÅ£º|" << Hashlist[Hash].TelNum << endl;
+		cout << "|  ç”µè¯å·ï¼š|" << Hashlist[Hash].TelNum << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|ÁªÏµµØÖ·£º|" << Hashlist[Hash].Address << endl;
+		cout << "|è”ç³»åœ°å€ï¼š|" << Hashlist[Hash].Address << endl;
 		cout << "---------------------------------------------" << endl << endl << endl;
 		
 	}
@@ -214,11 +213,11 @@ void Menu3()
 			p = p->next;
 		}
 		cout << "---------------------------------------------" << endl;
-		cout << "|    ĞÕÃû£º|" << name << endl;
+		cout << "|    å§“åï¼š|" << name << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|  µç»°ºÅ£º|" << p->TelNum << endl;
+		cout << "|  ç”µè¯å·ï¼š|" << p->TelNum << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|ÁªÏµµØÖ·£º|" << p->Address << endl;
+		cout << "|è”ç³»åœ°å€ï¼š|" << p->Address << endl;
 		cout << "---------------------------------------------" << endl << endl << endl;
 		
 	}
@@ -229,19 +228,19 @@ void Menu3()
 
 void Menu4()
 {
-	system("title = ²é¿´È«²¿ÁªÏµÈË");
+	system("title = æŸ¥çœ‹å…¨éƒ¨è”ç³»äºº");
 	system("cls");
-	if(counter==0)cout<<"µ±Ç°Í¨Ñ¶Â¼ÎŞÁªÏµÈË¿É¹©²é¿´"<<endl;
+	if(counter==0)cout<<"å½“å‰é€šè®¯å½•æ— è”ç³»äººå¯ä¾›æŸ¥çœ‹"<<endl;
 	else 
 	{
 	for (int i = 0; i < NameList.size(); i++)
 	{
 		cout << "---------------------------------------------" << endl;
-		cout << "|    ĞÕÃû£º|" << NameList[i] << endl;
+		cout << "|    å§“åï¼š|" << NameList[i] << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|  µç»°ºÅ£º|" << NumList[i] << endl;
+		cout << "|  ç”µè¯å·ï¼š|" << NumList[i] << endl;
 		cout << "|--------------------------------------------" << endl;
-		cout << "|ÁªÏµµØÖ·£º|" << AddList[i] << endl;
+		cout << "|è”ç³»åœ°å€ï¼š|" << AddList[i] << endl;
 		cout << "---------------------------------------------" << endl << endl << endl;
 	}
     }  
@@ -251,88 +250,88 @@ void Menu4()
 
 void Menu5()
 {
-	system("title = ¸ü¸ÄÖ÷ÌâºÍÑÕÉ«");
+	system("title = æ›´æ”¹ä¸»é¢˜å’Œé¢œè‰²");
 	system("cls");
 	cout << "|--------------------|--------------------|" << endl;
-	cout << "|1.²é¿´Ô¤ÉèµÄÖ÷Ìâ    |    2.×Ô¶¨ÒåÑ¡ÔñÅäÉ«|" << endl;
+	cout << "|1.æŸ¥çœ‹é¢„è®¾çš„ä¸»é¢˜    |    2.è‡ªå®šä¹‰é€‰æ‹©é…è‰²|" << endl;
 	cout << "|--------------------|--------------------|" << endl;
 	char select = _getch();
 	system("cls");
 	if (select == '1')
 	{
 		cout << "|--------------|--------------|" << endl;
-		cout << "|1.Ä¬ÈÏÖ÷Ìâ    |    2.Ã÷ÁÁÖ÷Ìâ|" << endl;
+		cout << "|1.é»˜è®¤ä¸»é¢˜    |    2.æ˜äº®ä¸»é¢˜|" << endl;
 		cout << "|--------------|--------------|" << endl;
-		cout << "|3.ºÚ°µÖ÷Ìâ    |    4.»¤ÑÛÖ÷Ìâ|" << endl;
+		cout << "|3.é»‘æš—ä¸»é¢˜    |    4.æŠ¤çœ¼ä¸»é¢˜|" << endl;
 		cout << "|--------------|--------------|" << endl;
 		select = _getch();
 		if (select == '1')
 		{
 			system("color 0F");
-			system("title= Í¨Ñ¶Â¼ $ Ä¬ÈÏÖ÷Ìâ");
+			system("title= é€šè®¯å½• $ é»˜è®¤ä¸»é¢˜");
 			system("cls");
-			cout << "Ö÷Ìâ¸ü¸Ä³É¹¦" << endl;
+			cout << "ä¸»é¢˜æ›´æ”¹æˆåŠŸ" << endl;
 		}
 		else if (select == '2')
 		{
 			system("color F0");
-			system("title= Í¨Ñ¶Â¼ $ Ã÷ÁÁÖ÷Ìâ");
+			system("title= é€šè®¯å½• $ æ˜äº®ä¸»é¢˜");
 			system("cls");
-			cout << "Ö÷Ìâ¸ü¸Ä³É¹¦" << endl;
+			cout << "ä¸»é¢˜æ›´æ”¹æˆåŠŸ" << endl;
 		}
 		else if (select == '3')
 		{
 			system("color 08");
-			system("title= Í¨Ñ¶Â¼ $ ºÚ°µÖ÷Ìâ");
+			system("title= é€šè®¯å½• $ é»‘æš—ä¸»é¢˜");
 			system("cls");
-			cout << "Ö÷Ìâ¸ü¸Ä³É¹¦" << endl;
+			cout << "ä¸»é¢˜æ›´æ”¹æˆåŠŸ" << endl;
 		}
 		else if (select == '4')
 		{
 			system("color E0");
-			system("title= Í¨Ñ¶Â¼ $ »¤ÑÛÖ÷Ìâ");
+			system("title= é€šè®¯å½• $ æŠ¤çœ¼ä¸»é¢˜");
 			system("cls");
-			cout << "Ö÷Ìâ¸ü¸Ä³É¹¦" << endl;
+			cout << "ä¸»é¢˜æ›´æ”¹æˆåŠŸ" << endl;
 		}
 	}
 	else if (select == '2')
 	{
 		char Back, Front;
-		cout << "±³¾°É«ºÍÎÄ×ÖÉ«Ñ¡ÔñÏàÍ¬Ê±½«²»»á·¢Éú¸Ä±ä" << endl << endl;
-		cout << "ÇëÑ¡Ôñ±³¾°É«" << endl;
-		cout << "0 = ºÚÉ«       8 = »ÒÉ«" << endl;
-		cout << "1 = À¶É«       9 = µ­À¶É«" << endl;
-		cout << "2 = ÂÌÉ«       A = µ­ÂÌÉ«" << endl;
-		cout << "3 = Ç³ÂÌÉ«     B = µ­Ç³ÂÌÉ«" << endl;
-		cout << "4 = ºìÉ«       C = µ­ºìÉ«" << endl;
-		cout << "5 = ×ÏÉ«       D = µ­×ÏÉ«" << endl;
-		cout << "6 = »ÆÉ«       E = µ­»ÆÉ«" << endl;
-		cout << "7 = °×É«       F = ÁÁ°×É«" << endl;
+		cout << "èƒŒæ™¯è‰²å’Œæ–‡å­—è‰²é€‰æ‹©ç›¸åŒæ—¶å°†ä¸ä¼šå‘ç”Ÿæ”¹å˜" << endl << endl;
+		cout << "è¯·é€‰æ‹©èƒŒæ™¯è‰²" << endl;
+		cout << "0 = é»‘è‰²       8 = ç°è‰²" << endl;
+		cout << "1 = è“è‰²       9 = æ·¡è“è‰²" << endl;
+		cout << "2 = ç»¿è‰²       A = æ·¡ç»¿è‰²" << endl;
+		cout << "3 = æµ…ç»¿è‰²     B = æ·¡æµ…ç»¿è‰²" << endl;
+		cout << "4 = çº¢è‰²       C = æ·¡çº¢è‰²" << endl;
+		cout << "5 = ç´«è‰²       D = æ·¡ç´«è‰²" << endl;
+		cout << "6 = é»„è‰²       E = æ·¡é»„è‰²" << endl;
+		cout << "7 = ç™½è‰²       F = äº®ç™½è‰²" << endl;
 		Back = _getch();
 		
 		system("cls");
-		cout << "ÇëÑ¡ÔñÎÄ×ÖÉ«" << endl;
-		cout << "0 = ºÚÉ«       8 = »ÒÉ«" << endl;
-		cout << "1 = À¶É«       9 = µ­À¶É«" << endl;
-		cout << "2 = ÂÌÉ«       A = µ­ÂÌÉ«" << endl;
-		cout << "3 = Ç³ÂÌÉ«     B = µ­Ç³ÂÌÉ«" << endl;
-		cout << "4 = ºìÉ«       C = µ­ºìÉ«" << endl;
-		cout << "5 = ×ÏÉ«       D = µ­×ÏÉ«" << endl;
-		cout << "6 = »ÆÉ«       E = µ­»ÆÉ«" << endl;
-		cout << "7 = °×É«       F = ÁÁ°×É«" << endl;
+		cout << "è¯·é€‰æ‹©æ–‡å­—è‰²" << endl;
+		cout << "0 = é»‘è‰²       8 = ç°è‰²" << endl;
+		cout << "1 = è“è‰²       9 = æ·¡è“è‰²" << endl;
+		cout << "2 = ç»¿è‰²       A = æ·¡ç»¿è‰²" << endl;
+		cout << "3 = æµ…ç»¿è‰²     B = æ·¡æµ…ç»¿è‰²" << endl;
+		cout << "4 = çº¢è‰²       C = æ·¡çº¢è‰²" << endl;
+		cout << "5 = ç´«è‰²       D = æ·¡ç´«è‰²" << endl;
+		cout << "6 = é»„è‰²       E = æ·¡é»„è‰²" << endl;
+		cout << "7 = ç™½è‰²       F = äº®ç™½è‰²" << endl;
 		Front = _getch();
 		char Color[9] = "color ";
 		Color[6] = Back;
 		Color[7] = Front;
 		system(Color);
 		system("cls");
-		cout << "³É¹¦×Ô¶¨ÒåÑ¡ÔñÅäÉ«" << endl;
+		cout << "æˆåŠŸè‡ªå®šä¹‰é€‰æ‹©é…è‰²" << endl;
 	}
 
 	else
 	{
 		system("cls");
-		cout << "Ö÷Ìâ¸ü¸ÄÊ§°Ü" << endl;
+		cout << "ä¸»é¢˜æ›´æ”¹å¤±è´¥" << endl;
 	}
 	system("pause");
 	system("cls");
@@ -341,7 +340,7 @@ void Menu5()
 int main()
 {
 	
-	system("title = Í¨Ñ¶Â¼£ºÖ÷²Ëµ¥");
+	system("title = é€šè®¯å½•ï¼šä¸»èœå•");
 
 	while (1)
 	{
@@ -357,7 +356,7 @@ int main()
 		else
 		{
 			system("cls");
-			cout << "##ÇëÑ¡ÔñÕıÈ·µÄÊı×Ö½øĞĞÑ¡Ôñ##" << endl << endl;
+			cout << "##è¯·é€‰æ‹©æ­£ç¡®çš„æ•°å­—è¿›è¡Œé€‰æ‹©##" << endl << endl;
 		}
 	}
 
